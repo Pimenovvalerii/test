@@ -1,0 +1,62 @@
+.subtitle {
+  font-family: 'Gilroy', sans-serif;
+  color: #EEEEEE;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--extraSmall {
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  &--small {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  &--medium {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &--big {
+    font-size: 22px;
+    line-height: 100%;
+  }
+
+  &--extra {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  &--300 {
+    font-weight: 300;
+  }
+
+  &--500 {
+    font-weight: 500;
+  }
+
+  &--700 {
+    font-weight: 700;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--link {
+    max-width: max-content;
+    border-bottom: 2px dotted #91ACD4;
+  }
+
+  &--green {
+    color: #83F6B1;
+  }
+
+  &--grey {
+    color: #91ACD4;
+  }
+}

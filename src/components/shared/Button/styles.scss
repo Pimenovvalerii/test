@@ -1,0 +1,39 @@
+.button {
+  position: relative;
+  background: #83F6B1;
+  padding: 14px 24px;
+  
+  border-radius: 5555px;
+  border: none;
+
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
+
+  color: #282A3B;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+
+  &__blur {
+    position: absolute;
+
+    width: 75px;
+    height: 28px;
+    left: 20px;
+    top: 29px;
+
+    background: #83F6B1;
+    opacity: 0.4;
+    filter: blur(40px);
+    border-radius: 5px;
+  }
+}
+

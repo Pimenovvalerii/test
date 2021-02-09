@@ -1,0 +1,21 @@
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #3C4561 !important;
+  border-radius: 5px !important;
+  border: none !important;
+  height: 40px !important;
+}
+
+.ant-select-selection-item {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
+  color: #EEEEEE;
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-left: 18px;
+  }
+}

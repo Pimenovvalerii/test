@@ -1,0 +1,21 @@
+.timer {
+  display: flex;
+  align-items: center;
+  font-family: Gilroy, sans-serif;
+  font-size: 22px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #83F6B1;
+
+  span {
+    padding-left: 8px;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--left {
+    justify-content: flex-end;
+  }
+}

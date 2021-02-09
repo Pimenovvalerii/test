@@ -1,0 +1,37 @@
+$spaces: (
+  0,
+  5,
+  8,
+  10,
+  11,
+  19,
+  23,
+  24,
+  27,
+  30,
+  46,
+  51,
+);
+
+@each $value in $spaces {
+  .pb {
+    &-#{$value} {
+      padding-bottom: #{$value}px;
+    }
+  }
+  .pt {
+    &-#{$value} {
+      padding-top: #{$value}px;
+    }
+  }
+  .pr {
+    &-#{$value} {
+      padding-right: #{$value}px;
+    }
+  }
+  .pl {
+    &-#{$value} {
+      padding-left: #{$value}px;
+    }
+  }
+}
