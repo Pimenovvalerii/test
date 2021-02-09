@@ -27,7 +27,7 @@ const SelectCards: FC<ISelectCards> = ({getData}) => {
     },
   ];
 
-  const handleProvinceChange = (paiment: any) => {
+  const handleProvinceChange = (paiment: string) => {
     getData(paiment);
   };
 

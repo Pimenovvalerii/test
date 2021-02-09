@@ -13,10 +13,17 @@ type IPriceCards = {
     price: string,
     benefit: string,
   }) => void;
+};
+
+type IPrices = {
+  value: string;
+  price: string;
+  benefit: string;
+  checked: boolean;
 }
 
 const PriceCards:FC<IPriceCards> = ({getData}) => {
-  const [prices, setPrices] = useState([
+  const [prices, setPrices] = useState<Array<IPrices>>([
     {
       value:'a',
       price: '50',
@@ -36,11 +43,11 @@ const PriceCards:FC<IPriceCards> = ({getData}) => {
       checked: false,
     },
   ])
-  const onChange = (event: any) => { 
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => { 
     const { id } = event.target;
     
-    setPrices((prev: any) => {
-      return prev.map((elem: any) => {
+    setPrices((prev) => {
+      return prev.map((elem) => {
         if(elem.value === id) {
           const newValue = {...elem, checked: true};
           return newValue;
