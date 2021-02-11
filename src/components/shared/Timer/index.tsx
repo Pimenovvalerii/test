@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from 'react';
+import React, {useState, useEffect, useRef, FC } from 'react';
 import classNames from 'classnames';
 import moment from 'moment';
 
@@ -12,25 +12,29 @@ type ITimer = {
 }
 
 const Timer: FC<ITimer> = ({seconds, position}) => {
+  const interval = useRef<NodeJS.Timeout | null>(null);
   const [time, setTime] = useState(seconds);
 
   useEffect(() => {
-    
-    const interval = setInterval(() => {
-      setTime(prev => --prev)
-    }, 1000)
-    console.log(time , 'time')
-
-    if(time === 0) {
-      clearInterval(interval)
-    }
+    interval.current = setInterval(() => {
+      setTime(prev => --prev);
+    }, 1000);
 
     return () => {
-      clearInterval(interval)
+      if(typeof interval.current === 'number') {
+        clearInterval(interval.current)
+      };
     }
+  },[]);
+
+  useEffect(() => {
+    if(time === 0) {
+      if(typeof interval.current === 'number') {
+        clearInterval(interval.current)
+      };
+    };
   },[time]);
 
-  
   return (
     <div className={classNames('timer',`timer--${position}`)}>
       <div>
