@@ -40,7 +40,7 @@ const SubscriptionModal = () => {
           onClose={() => setShowAlert(false)}
         />
       )}
-      <Timer seconds={960} position='center'/>
+      <Timer seconds={10} position='center'/>
       <Subtitle 
         size='extra'
         fontWeight='700'

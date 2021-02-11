@@ -15,13 +15,21 @@ const Timer: FC<ITimer> = ({seconds, position}) => {
   const [time, setTime] = useState(seconds);
 
   useEffect(() => {
+    
     const interval = setInterval(() => {
       setTime(prev => --prev)
     }, 1000)
+    console.log(time , 'time')
+
+    if(time === 0) {
+      clearInterval(interval)
+    }
+
     return () => {
       clearInterval(interval)
     }
-  },[]);
+  },[time]);
+
   
   return (
     <div className={classNames('timer',`timer--${position}`)}>
